@@ -1,0 +1,108 @@
+body {
+    background-color: #1A1A2E; /* Dark blue background */
+    color: #E7E7DE; /* Light text color for readability */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    width: 400px; /* Adjusted width for additional content */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #0F3460; /* Darker blue for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #21E1E1; /* KuSwap's light blue for headings */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form, #dashboard {
+    background-color: #16213E; /* Slightly different blue for distinction */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label, input, button {
+    width: 100%; /* Full width */
+    margin: 5px 0; /* Spacing for clarity */
+}
+
+input[type=number], input[type=text], input[type=submit] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #21E1E1; /* Light blue border */
+    background-color: transparent;
+    color: #E7E7DE;
+    outline: none;
+}
+
+input[type=submit], #emergencyWithdraw {
+    background-color: #21E1E1; /* Light blue for buttons */
+    color: #1A1A2E; /* Dark text for buttons */
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type=submit]:hover, #emergencyWithdraw:hover {
+    background-color: #E7E7DE;
+    color: #0F3460;
+}
+
+#emergencyWithdraw {
+    background-color: #E94560; /* Red for emergency button */
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #21E1E1;
+    background-color: #0F3460;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    color: #E7E7DE;
+    flex-grow: 1; /* Equal width for each tab */
+}
+
+.tab button:hover {
+    background-color: #16213E;
+}
+
+.tab button.active {
+    background-color: #21E1E1;
+    color: #1A1A2E;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+@media (max-width: 400px) {
+    #container {
+        width: 95%;
+    }
+}
