@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Trading Bot Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Grid Trading Bot Dashboard</h1>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Dashboard')">Dashboard</button>
+            <button class="tablinks" onclick="openTab(event, 'TradingInfo')">Trading Info</button>
+        </div>
+
+        <div id="Dashboard" class="tabcontent">
+            <div id="dashboard">
+                <p>Current Price: <span id="currentPrice">-- wKCS</span></p>
+                <p>Realized PnL: <span id="realizedPnL">-- wKCS</span></p>
+                <p>Total Investment: <span id="totalInvestment">-- wKCS</span></p>
+                <p>Total Value: <span id="totalValue">-- wKCS</span></p>
+            </div>
+            <form id="settingsForm">
+                <!-- Form fields for grid trading settings -->
+                <label for="gridSize">Grid Size:</label>
+                <input type="number" id="gridSize" name="gridSize" min="1" step="1" value="10" required>
+
+                <label for="lowerPrice">Lower Price Limit (in wKCS):</label>
+                <input type="text" id="lowerPrice" name="lowerPrice" required>
+
+                <label for="upperPrice">Upper Price Limit (in wKCS):</label>
+                <input type="text" id="upperPrice" name="upperPrice" required>
+
+                <label for="amountPerGrid">Amount per Grid (in wKCS):</label>
+                <input type="text" id="amountPerGrid" name="amountPerGrid" required>
+
+                <label for="stopLossPrice">Stop Loss Price (in wKCS):</label>
+                <input type="text" id="stopLossPrice" name="stopLossPrice" required>
+
+                <input type="submit" value="Update Settings">
+            </form>
+            <button id="emergencyWithdraw">Emergency Withdraw</button>
+        </div>
+
+        <div id="TradingInfo" class="tabcontent">
+            <h3>Trading Information</h3>
+            <p>Grid Size: <span id="gridSizeInfo">--</span></p>
+            <p>Lower Price Limit: <span id="lowerPriceInfo">-- wKCS</span></p>
+            <p>Upper Price Limit: <span id="upperPriceInfo">-- wKCS</span></p>
+            <p>Amount per Grid: <span id="amountPerGridInfo">-- wKCS</span></p>
+            <p>Stop Loss Price: <span id="stopLossPriceInfo">-- wKCS</span></p>
+            <!-- Additional trading information here -->
+        </div>
+    </div>
+    <script src="web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
